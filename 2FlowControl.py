@@ -132,3 +132,43 @@ while True:
     if password == 'Barricuda':
         break
 print('Access granted')
+
+# Continue is similar to break, except we tell it to essentially skip whatever use case we hit. For example if we have a divid by 0
+# we can use continue to essentially keep running the loop, but know that if we hit 0 we need to skip over it. 
+
+# FOR loops
+# For each item in a list do the following.
+print('My name is')
+for i in range(5):
+    print('Jimmy Five Times (' + str(i) + ')')
+
+total = 0
+for num in range(101):
+    total = total + num
+print(total)
+
+# You can use a while loop in place of a for loop some times such as in the following:
+print('My name is')
+i = 0
+while i < 5:
+    print('Jimmy Five Times (' + str(i) + ')')
+    i = i + 1
+
+# Some functions can take in multipe arguments. range() is one of them. We can call range(x y z) x = starting value y = end z = interval.
+# range(0, 10, 2) Will get every number from 0-10 and increments by 2 so we'll see 0, 2, 4, 6, 8.
+for i in range(0, 10, 2):
+    print(i)
+
+# We can use this functionality to count down as well. The following will print out 5, 4, 3, 2, 1, 0.
+for i in range(5, -1, -1):
+    print(i)
+
+# We can import modules into python to perform functiosn outside of basic python's scope. 
+# We call these with 'import' along with the module name. 
+# The following calls the random module white 
+import random
+for i in range(5):
+    print(random.randint(1,10))
+
+# We can import multiple modules by separating them with commas as seen in the following example.
+import random, sys, os, math
